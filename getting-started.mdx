@@ -1,0 +1,135 @@
+---
+title: Getting Started
+description: Step-by-step guide to set up and start using sarath chandra Documentation
+---
+
+## Prerequisites
+
+Before diving into sarath chandra Documentation, ensure you have a stable internet connection and a modern web browser. No additional software installations are required for basic usage.
+
+<Callout kind="info">If you're new to documentation platforms, this guide will walk you through the entire setup process.</Callout>
+
+## Account Setup
+
+<Tabs>
+  <Tab title="Web Interface" icon="globe">
+    <Steps>
+      <Step title="Visit Website" icon="external-link">
+        Navigate to sarathchandra.com and click on "Sign Up".
+      </Step>
+      <Step title="Enter Details" icon="user">
+        Provide your email, create a password, and verify your account.
+      </Step>
+      <Step title="Confirm Email" icon="mail">
+        Check your inbox for a verification link and complete registration.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="API Setup" icon="code">
+    <Steps>
+      <Step title="Generate API Key" icon="key">
+        After account creation, navigate to settings and generate an API key.
+      </Step>
+      <Step title="Install SDK" icon="download">
+        <CodeGroup tabs="npm,pip">
+          ````bash
+          npm install sarath-docs-sdk
+          ````
+          ````bash
+          pip install sarath-docs
+          ````
+        </CodeGroup>
+      </Step>
+      <Step title="Initialize Client" icon="settings">
+        Use your API key to initialize the documentation client.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Creating Your First Project
+
+<Columns cols={2}>
+  <Card title="Manual Creation" icon="plus" href="#manual">
+    Use the web interface to create a new project manually.
+  </Card>
+  <Card title="Import Existing" icon="upload" href="#import">
+    Import documentation from other platforms or file formats.
+  </Card>
+</Columns>
+
+### Manual Project Creation
+
+<Steps>
+  <Step title="Access Dashboard" icon="layout-dashboard">
+    Log in to your account and click "New Project".
+  </Step>
+  <Step title="Configure Settings" icon="settings">
+    Choose a project name, description, and visibility settings.
+  </Step>
+  <Step title="Add Team Members" icon="users">
+    Invite collaborators with appropriate permissions.
+  </Step>
+  <Step title="Create First Page" icon="file-text">
+    Start by creating an introduction page for your documentation.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="JavaScript,Python">
+  ````javascript
+  const project = await docs.createProject({
+    name: 'My Documentation',
+    description: 'Project documentation for XYZ',
+    visibility: 'private'
+  });
+  
+  console.log('Project created:', project.id);
+  ````
+  ````python
+  project = docs.create_project(
+      name='My Documentation',
+      description='Project documentation for XYZ',
+      visibility='private'
+  )
+  
+  print('Project created:', project.id)
+  ````
+</CodeGroup>
+
+### Importing Documentation
+
+<Expandable title="Supported Formats" default-open="false">
+  sarath chandra Documentation supports importing from Markdown files, GitHub repositories, and popular documentation platforms like ReadTheDocs and GitBook.
+</Expandable>
+
+<ExpandableGroup>
+  <Expandable title="Markdown Import" default-open="false">
+    Upload .md files or provide a repository URL for automatic conversion.
+  </Expandable>
+  <Expandable title="API Migration" default-open="false">
+    Use our migration tools to transfer content from other API documentation platforms.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="success">Once your project is set up, you can start adding content and customizing the appearance.</Callout>
+
+## Best Practices
+
+| Practice | Description | Benefit |
+|----------|-------------|---------|
+| Use Clear Titles | Choose descriptive page titles | Improves navigation |
+| Organize with Folders | Group related content | Enhances discoverability |
+| Regular Updates | Keep documentation current | Maintains accuracy |
+| Version Control | Use versioning for major changes | Tracks history |
+
+<Update label="2024-10-10" description="Setup Guide v1.0" tags={["feature", "guide"]}>
+
+## New Features
+
+- Added interactive setup wizard
+- Improved import capabilities for multiple formats
+- Enhanced team collaboration features
+
+</Update>
+
+This guide ensures you're fully prepared to leverage sarath chandra Documentation's powerful features. Continue exploring the API overview and advanced features for deeper integration options.
